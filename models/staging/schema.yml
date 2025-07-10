@@ -1,5 +1,21 @@
 version: 2
 
+sources:
+  - name: fivetran_staging
+    description: "Fivetran staging tables"
+    tables:
+      - name: test_patient_data
+        description: "Patient data from Fivetran connector"
+        columns:
+          - name: patient
+            description: "Patient identifier"
+          - name: date
+            description: "Visit date"
+          - name: age
+            description: "Patient age"
+          - name: sugar_level
+            description: "Blood sugar level"
+
 models:
   - name: stg_csv_data
     description: "Staging model for patient data processing from GCP bucket CSV"
