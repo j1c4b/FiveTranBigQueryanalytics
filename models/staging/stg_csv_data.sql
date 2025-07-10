@@ -9,7 +9,7 @@ select
     cast(age as int64) as patient_age,
     cast(sugar_level as int64) as blood_sugar_level
     
-from {{ source('fivetran_staging', 'test_patient_data') }}
+from {{ source('gcs', 'test_results_data') }}
 
 -- Add basic data quality checks
 where patient is not null

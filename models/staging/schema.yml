@@ -1,11 +1,11 @@
 version: 2
 
 sources:
-  - name: fivetran_staging
-    description: "Fivetran staging tables"
+  - name: gcs
+    description: "Google Cloud Storage connector tables"
     tables:
-      - name: test_patient_data
-        description: "Patient data from Fivetran connector"
+      - name: test_results_data
+        description: "Patient data from GCS connector"
         columns:
           - name: patient
             description: "Patient identifier"
