@@ -17,5 +17,5 @@ select
         else 'High'
     end as blood_sugar_category
     
-from {{ ref('stg_csv_data') }}
+from {{ ref('process_patient_data') }}
 group by patient_id

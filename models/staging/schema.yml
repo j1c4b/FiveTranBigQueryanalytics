@@ -17,8 +17,8 @@ sources:
             description: "Blood sugar level"
 
 models:
-  - name: stg_csv_data
-    description: "Staging model for patient data processing from GCP bucket CSV"
+  - name: process_patient_data
+    description: "Process patient data from GCS connector"
     columns:
       - name: patient_id
         description: "Patient identifier"
