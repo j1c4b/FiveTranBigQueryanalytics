@@ -1,8 +1,11 @@
 {{ config(materialized='table') }}
 
 -- Staging model for patient data from Fivetran GCS connector
--- Simple select to test connectivity first
+-- Select all columns explicitly
 
-select *
+select
+    patient,
+    date,
+    age,
+    sugar_level
 from {{ source('gcs', 'test_results_data') }}
-limit 10
